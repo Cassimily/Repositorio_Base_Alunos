@@ -1,0 +1,489 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Temporadas - Grey's Anatomy</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.75)
+                ),
+                url("{{ url_for('static', filename='imagem/capa.png') }}");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        /* CABEÇALHO */
+
+        header {
+
+            padding: 20px 40px;
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        header h1 {
+
+            margin: 0;
+
+            font-size: 30px;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-size: 17px;
+        }
+
+
+        nav a:hover {
+
+            color: #e91e63;
+        }
+
+
+        /* CONTEÚDO */
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: 50px auto;
+
+            padding: 0 30px;
+        }
+
+
+        /* TÍTULO */
+
+        .titulo {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .titulo h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .titulo p {
+
+            font-size: 18px;
+
+            color: #ddd;
+        }
+
+
+        /* TEMPORADAS */
+
+        .temporadas {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* CARD */
+
+        .card {
+
+            background-color:
+                rgba(0, 0, 0, 0.80);
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.5);
+
+            transition: transform 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+        }
+
+
+        .card h3 {
+
+            color: #e91e63;
+
+            font-size: 26px;
+
+            margin-top: 0;
+        }
+
+
+        .card p {
+
+            color: #eee;
+
+            line-height: 1.6;
+        }
+
+
+        .info {
+
+            color: #ccc;
+
+            font-size: 15px;
+        }
+
+
+        /* BOTÃO */
+
+        .voltar {
+
+            display: block;
+
+            width: fit-content;
+
+            margin: 45px auto 20px;
+
+            padding: 12px 25px;
+
+            background-color: #e91e63;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+        }
+
+
+        .voltar:hover {
+
+            background-color: #c2185b;
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 900px) {
+
+            .temporadas {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            nav a {
+
+                margin: 0 8px;
+            }
+
+
+            .temporadas {
+
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>🏥 Grey's Anatomy</h1>
+
+
+        <nav>
+
+            <a href="/">
+                Início
+            </a>
+
+
+            <a href="/personagens">
+                Personagens
+            </a>
+
+
+            <a href="/temporadas">
+                Temporadas
+            </a>
+
+
+            <a href="#">
+                Curiosidades
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <div class="container">
+
+
+        <div class="titulo">
+
+            <h2>📺 Temporadas</h2>
+
+            <p>
+                Conheça as temporadas de
+                Grey's Anatomy.
+            </p>
+
+        </div>
+
+
+        <div class="temporadas">
+
+
+            <!-- TEMPORADA 1 -->
+
+            <div class="card">
+
+                <h3>Temporada 1</h3>
+
+                <p class="info">
+                    2005 • 9 episódios
+                </p>
+
+                <p>
+                    Meredith Grey começa sua residência
+                    cirúrgica no Seattle Grace Hospital,
+                    conhecendo seus colegas e enfrentando
+                    os primeiros desafios da profissão.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 2 -->
+
+            <div class="card">
+
+                <h3>Temporada 2</h3>
+
+                <p class="info">
+                    2005–2006
+                </p>
+
+                <p>
+                    Os médicos enfrentam novos desafios
+                    profissionais e pessoais enquanto seus
+                    relacionamentos começam a ficar cada
+                    vez mais complicados.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 3 -->
+
+            <div class="card">
+
+                <h3>Temporada 3</h3>
+
+                <p class="info">
+                    2006–2007
+                </p>
+
+                <p>
+                    Meredith e seus colegas continuam
+                    avançando na residência enquanto
+                    enfrentam decisões importantes
+                    em suas vidas.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 4 -->
+
+            <div class="card">
+
+                <h3>Temporada 4</h3>
+
+                <p class="info">
+                    2007–2008
+                </p>
+
+                <p>
+                    Os personagens começam novas fases
+                    profissionais e enfrentam mudanças
+                    importantes dentro do hospital.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 5 -->
+
+            <div class="card">
+
+                <h3>Temporada 5</h3>
+
+                <p class="info">
+                    2008–2009
+                </p>
+
+                <p>
+                    Novos desafios médicos e acontecimentos
+                    marcantes mudam profundamente a vida
+                    dos personagens.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 6 -->
+
+            <div class="card">
+
+                <h3>Temporada 6</h3>
+
+                <p class="info">
+                    2009–2010
+                </p>
+
+                <p>
+                    O hospital passa por grandes mudanças
+                    enquanto os médicos enfrentam situações
+                    extremamente difíceis.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 7 -->
+
+            <div class="card">
+
+                <h3>Temporada 7</h3>
+
+                <p class="info">
+                    2010–2011
+                </p>
+
+                <p>
+                    Os personagens tentam lidar com as
+                    consequências dos acontecimentos
+                    anteriores e reconstruir suas vidas.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 8 -->
+
+            <div class="card">
+
+                <h3>Temporada 8</h3>
+
+                <p class="info">
+                    2011–2012
+                </p>
+
+                <p>
+                    Os médicos enfrentam importantes
+                    decisões sobre suas carreiras,
+                    relacionamentos e futuro.
+                </p>
+
+            </div>
+
+
+            <!-- TEMPORADA 9 -->
+
+            <div class="card">
+
+                <h3>Temporada 9</h3>
+
+                <p class="info">
+                    2012–2013
+                </p>
+
+                <p>
+                    Uma nova fase começa no hospital,
+                    trazendo mudanças importantes para
+                    os médicos.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="/" class="voltar">
+            ← Voltar para o início
+        </a>
+
+
+    </div>
+
+
+</body>
+
+</html>
+```

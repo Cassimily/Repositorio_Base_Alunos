@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>API REST Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body text-center">
+                <h1 class="display-5 fw-bold text-primary">API REST Calculadora</h1>
+                <p class="lead mt-3">Use as rotas com parâmetros na URL:</p>
+                <ul class="list-group list-group-flush mt-4">
+                    <li class="list-group-item">
+                        <code>/soma?valor1=5&valor2=6</code>
+                    </li>
+                    <li class="list-group-item">
+                        <code>/subtrair?valor1=5&valor2=6</code>
+                    </li>
+                    <li class="list-group-item">
+                        <code>/multiplicar?valor1=5&valor2=6</code>
+                    </li>
+                    <li class="list-group-item">
+                        <code>/dividir?valor1=5&valor2=6</code>
+                    </li>
+                </ul>
+                <div class="mt-4">
+                    <p class="text-muted">Exemplo: <code>http://127.0.0.1:5000/soma?valor1=10&valor2=20</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
